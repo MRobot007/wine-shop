@@ -11,6 +11,11 @@ export default function Navbar() {
   const pathname = usePathname();
   const { count } = useCart();
 
+  // A link is active only when it's a plain path (no ?cat= filter) that matches
+  // the current route — otherwise every /shop/?cat=… link lights up on /shop/.
+  const norm = (p) => (p && p.length > 1 ? p.replace(/\/+$/, "") : p);
+  const isActive = (href) => !href.includes("?") && norm(pathname) === norm(href);
+
   useEffect(() => {
     const onKey = (e) => e.key === "Escape" && setOpen(false);
     document.addEventListener("keydown", onKey);
@@ -40,7 +45,7 @@ export default function Navbar() {
             <Link
               key={l.label}
               href={l.href}
-              className={pathname === l.href.split("?")[0] ? "is-active" : ""}
+              className={isActive(l.href) ? "is-active" : ""}
             >
               {l.label}
             </Link>
