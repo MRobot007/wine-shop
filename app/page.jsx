@@ -4,6 +4,9 @@ import WineSlider from "@/components/WineSlider";
 import Icon from "@/components/Icon";
 import { VALUES, COLLECTIONS, TESTIMONIALS, EVENTS, HERO_TRUST } from "@/lib/content";
 
+// Bento tile placement — maps the 4 collections to named CSS grid areas
+const BENTO_AREAS = ["red", "spirits", "beer", "cigars"];
+
 export default function HomePage() {
   return (
     <>
@@ -62,7 +65,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* COLLECTIONS */}
+      {/* COLLECTIONS — bento */}
       <section className="section section--alt">
         <div className="container">
           <div className="section-head is-centered">
@@ -70,35 +73,32 @@ export default function HomePage() {
             <h2>Shop our collections</h2>
             <p>From a quiet Tuesday bottle to a wedding-sized order.</p>
           </div>
-          <div className="collections">
-            {COLLECTIONS.map((c) => (
-              <Link className="collection" key={c.title} href={c.href}>
-                <span className="collection__img" style={{ backgroundImage: `url('${c.img}')` }} />
-                <h3>{c.title}</h3>
-                <span className="sub">{c.sub}</span>
-                <span className="go">Shop now →</span>
+          <div className="bento">
+            {COLLECTIONS.map((c, i) => (
+              <Link
+                className={`bento__tile${i === 0 ? " bento__tile--feature" : ""}`}
+                key={c.title}
+                href={c.href}
+                style={{ gridArea: BENTO_AREAS[i] }}
+              >
+                <span className="bento__img" style={{ backgroundImage: `url('${c.img}')` }} />
+                <span className="bento__body">
+                  <h3>{c.title}</h3>
+                  <span className="sub">{c.sub}</span>
+                  <span className="go">Shop now →</span>
+                </span>
               </Link>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* PROMO BANNER */}
-      <section className="section">
-        <div className="container">
-          <div className="promo-banner">
-            <div className="promo-banner__text">
-              <span className="eyebrow">Mix &amp; match</span>
-              <h2>Build a case, save 10%</h2>
-              <p>Any 12 bottles, any mix. The 10% comes off automatically.</p>
+            <div className="bento__promo">
+              <div className="bento__promo-text">
+                <span className="eyebrow">Mix &amp; match</span>
+                <h3>Build a case, save 10%</h3>
+                <p>Any 12 bottles, any mix — the discount comes off automatically.</p>
+              </div>
               <Link className="btn btn-light btn--lg" href="/shop/">
                 Start your case <span className="btn-arrow" aria-hidden="true">→</span>
               </Link>
             </div>
-            <div
-              className="promo-banner__media"
-              style={{ backgroundImage: "url('/assets/coll-red.webp')" }}
-            />
           </div>
         </div>
       </section>

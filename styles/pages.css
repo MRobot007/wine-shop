@@ -139,25 +139,36 @@
   color: var(--muted);
 }
 
-/* ============================ COLLECTIONS ============================ */
-.collections {
+/* ============================ COLLECTIONS — BENTO ============================ */
+.bento {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 215px 215px auto;
   gap: 1rem;
+  grid-template-areas:
+    "red red spirits cigars"
+    "red red beer    cigars"
+    "promo promo promo promo";
 }
-.collection {
+.bento__tile {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  aspect-ratio: 3 / 4;
-  border-radius: var(--radius-lg);
   overflow: hidden;
-  padding: 1.2rem;
+  border-radius: var(--radius-lg);
+  padding: 1.3rem;
   isolation: isolate;
   border: 1px solid var(--line);
+  color: #fff;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
 }
-.collection__img {
+.bento__tile:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.bento__img {
   position: absolute;
   inset: 0;
   z-index: -2;
@@ -165,33 +176,114 @@
   background-position: center;
   transition: transform 0.8s var(--ease);
 }
-.collection::after {
+.bento__tile::after {
   content: "";
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(180deg, rgba(10, 8, 7, 0.1) 35%, rgba(10, 8, 7, 0.82));
+  background: linear-gradient(180deg, rgba(10, 8, 7, 0.05) 26%, rgba(10, 8, 7, 0.9));
 }
-.collection:hover .collection__img {
-  transform: scale(1.06);
+.bento__tile:hover .bento__img {
+  transform: scale(1.07);
 }
-.collection h3 {
+.bento__body {
+  position: relative;
+}
+.bento__tile h3 {
   color: #fff;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+  line-height: 1.08;
 }
-.collection .sub {
-  color: rgba(255, 255, 255, 0.78);
+.bento__tile .sub {
+  display: block;
+  color: rgba(255, 255, 255, 0.82);
   font-size: var(--text-sm);
-  margin-top: 0.2rem;
+  margin-top: 0.25rem;
 }
-.collection .go {
+.bento__tile .go {
+  display: inline-block;
   margin-top: 0.8rem;
   font-family: var(--font-display);
-  font-size: 0.78rem;
+  font-size: 0.74rem;
   font-weight: 600;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #fff;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.55);
+  padding-bottom: 2px;
+}
+.bento__tile--feature h3 {
+  font-size: clamp(1.9rem, 1.4rem + 1.6vw, 2.7rem);
+  letter-spacing: -0.01em;
+}
+.bento__tile--feature .sub {
+  font-size: 1rem;
+  margin-top: 0.4rem;
+}
+.bento__promo {
+  grid-area: promo;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.2rem 2rem;
+  padding: clamp(1.5rem, 1.1rem + 2vw, 2.2rem) clamp(1.6rem, 1.2rem + 2vw, 2.6rem);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(125deg, var(--wine), var(--wine-deep));
+  color: #fff;
+  box-shadow: var(--shadow-md);
+}
+.bento__promo-text {
+  max-width: 46ch;
+}
+.bento__promo .eyebrow,
+.bento__promo .eyebrow::before {
+  color: #f0c9cf;
+}
+.bento__promo .eyebrow::before {
+  background: #f0c9cf;
+}
+.bento__promo h3 {
+  color: #fff;
+  font-size: clamp(1.5rem, 1.2rem + 1.4vw, 2.1rem);
+  margin-top: 0.4rem;
+}
+.bento__promo p {
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 0.4rem;
+}
+.bento__promo .btn {
+  flex: none;
+}
+
+/* Bento collapses to a 2-up phone/tablet layout */
+@media (max-width: 900px) {
+  .bento {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 165px 165px 150px 165px auto;
+    gap: 0.8rem;
+    grid-template-areas:
+      "red red"
+      "red red"
+      "spirits beer"
+      "cigars cigars"
+      "promo promo";
+  }
+  .bento__tile {
+    padding: 1.05rem;
+  }
+  .bento__tile h3 {
+    font-size: 1.2rem;
+  }
+  .bento__promo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .bento__promo .btn {
+    width: 100%;
+  }
 }
 
 /* ============================ PRODUCT GRIDS ============================ */
