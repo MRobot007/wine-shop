@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Best Wine &amp; Spirits — Cambridge, Maryland | Wine · Spirits · Craft Beer · Cigars</title>
+    <meta
+      name="description"
+      content="Maryland's Eastern Shore destination for fine wine, spirits, craft beer, and premium cigars. 1,000+ wines, a walk-in cedar humidor, expert pairings, and event planning in Cambridge, MD."
+    />
+    <meta name="theme-color" content="#0a0507" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Best Wine & Spirits — Cambridge, Maryland" />
+    <meta
+      property="og:description"
+      content="The Eastern Shore's finest wine, spirits, craft beer, and cigars. Curated for you."
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/tokens.css" />
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/glass.css" />
+    <link rel="stylesheet" href="styles/animations.css" />
+    <link rel="stylesheet" href="styles/layout.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- ===================== AGE GATE ===================== -->
+    <div class="agegate" id="ageGate" role="dialog" aria-modal="true" aria-labelledby="ageTitle" hidden>
+      <div class="glass glass-strong agegate__card">
+        <span class="brand__mark" aria-hidden="true">B</span>
+        <h2 id="ageTitle">Are you 21 or older?</h2>
+        <p>You must be of legal drinking age to enter Best Wine &amp; Spirits.</p>
+        <div class="agegate__actions">
+          <button class="btn btn-primary" id="ageYes" type="button">Yes, enter</button>
+          <a class="btn btn-glass" href="https://www.responsibility.org/" id="ageNo">I'm under 21</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== NAV ===================== -->
+    <header class="nav" id="nav">
+      <div class="nav__inner">
+        <a class="brand" href="#top" aria-label="Best Wine & Spirits home">
+          <span class="brand__mark" aria-hidden="true">B</span>
+          <span>
+            Best Wine &amp; Spirits
+            <small>Cambridge, MD</small>
+          </span>
+        </a>
+
+        <nav class="nav__links" id="navLinks" aria-label="Primary">
+          <a href="#collection">Collection</a>
+          <a href="#humidor">The Humidor</a>
+          <a href="#events">Events</a>
+          <a href="#request">Item Request</a>
+          <a href="#visit">Visit</a>
+        </nav>
+
+        <div class="nav__actions">
+          <a class="btn btn-glass" href="tel:4102210116">410-221-0116</a>
+          <a class="btn btn-primary" href="#request">Request an Item <span class="btn-arrow" aria-hidden="true">→</span></a>
+          <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <span id="top"></span>
+
+      <!-- ===================== HERO ===================== -->
+      <section class="hero" aria-labelledby="heroTitle">
+        <div class="orbs" aria-hidden="true">
+          <div class="orb orb--wine" data-parallax="0.18"></div>
+          <div class="orb orb--gold" data-parallax="-0.12"></div>
+          <div class="orb orb--plum" data-parallax="0.08"></div>
+        </div>
+
+        <div class="container hero__grid">
+          <div class="hero__content">
+            <span class="chip anim-in" style="--delay: 80ms">
+              <span class="dot"></span> The Eastern Shore's finest cellar &amp; humidor
+            </span>
+
+            <h1 id="heroTitle" class="anim-in" style="--delay: 180ms">
+              The Best Wine &amp;<br />
+              Spirits Maryland<br />
+              <em class="gold-text">Has to Offer.</em>
+            </h1>
+
+            <p class="hero__sub anim-in" style="--delay: 320ms">
+              Over 1,000 hand-picked wines, a Spanish-cedar walk-in humidor, rotating local
+              craft beer, and spirits for every occasion — curated by people who actually
+              taste what they sell.
+            </p>
+
+            <div class="hero__cta anim-in" style="--delay: 440ms">
+              <a class="btn btn-primary" href="#collection">Explore the Collection <span class="btn-arrow" aria-hidden="true">→</span></a>
+              <a class="btn btn-glass" href="#events">Plan an Event</a>
+            </div>
+
+            <div class="hero__stats anim-in" style="--delay: 560ms">
+              <span class="chip"><span class="dot"></span> 1,000+ Wines</span>
+              <span class="chip"><span class="dot"></span> 1,000+ Cigars</span>
+              <span class="chip"><span class="dot"></span> Largest selection in Dorchester County</span>
+            </div>
+          </div>
+
+          <div class="hero__visual anim-in" style="--delay: 420ms" aria-hidden="true">
+            <div class="hero__card hero__card--main float glass">
+              <span class="sheen"></span>
+              <h3>Staff Pick of the Week</h3>
+              <p>Reserve Cabernet — bold, structured, cellar-worthy.</p>
+            </div>
+            <div class="hero__badge glass">
+              <div>
+                <strong>30+</strong>
+                <span>Years curating</span>
+              </div>
+            </div>
+            <div class="hero__chip glass glass-strong">
+              <div>
+                <div class="rating">★★★★★</div>
+                <small>Loved on Yelp &amp; Google</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="scroll-cue" aria-hidden="true">
+          <span class="scroll-cue__mouse"></span>
+          Scroll
+        </div>
+      </section>
+
+      <!-- ===================== MARQUEE ===================== -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>Bordeaux</span>
+          <span>Napa Valley</span>
+          <span>Cohiba</span>
+          <span>Champagne</span>
+          <span>Arturo Fuente</span>
+          <span>Tuscany</span>
+          <span>Local Craft Beer</span>
+          <span>Single Malt</span>
+          <!-- duplicate for seamless loop -->
+          <span>Bordeaux</span>
+          <span>Napa Valley</span>
+          <span>Cohiba</span>
+          <span>Champagne</span>
+          <span>Arturo Fuente</span>
+          <span>Tuscany</span>
+          <span>Local Craft Beer</span>
+          <span>Single Malt</span>
+        </div>
+      </div>
+
+      <!-- ===================== CATEGORIES ===================== -->
+      <section class="section" id="collection" aria-labelledby="collectionTitle">
+        <div class="container">
+          <div class="section-head is-centered" data-reveal>
+            <span class="eyebrow is-centered">What we pour</span>
+            <h2 id="collectionTitle">Four cellars under one roof</h2>
+            <p>From a quiet Tuesday bottle to a wedding-sized order — explore the departments our regulars come back for.</p>
+          </div>
+
+          <div class="cats">
+            <article class="cat glass-interactive" data-reveal style="--reveal-delay: 0ms">
+              <span class="sheen"></span>
+              <div
+                class="cat__img"
+                style="background-image: url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=700&q=70')"
+              ></div>
+              <span class="cat__index">01</span>
+              <h3>Wine</h3>
+              <p>1,000+ varieties and the largest local selection in Dorchester County — plus cold wines &amp; champagne ready to chill.</p>
+              <a class="cat__link" href="#request">Find a bottle →</a>
+            </article>
+
+            <article class="cat glass-interactive" data-reveal style="--reveal-delay: 90ms">
+              <span class="sheen"></span>
+              <div
+                class="cat__img"
+                style="background-image: url('https://images.unsplash.com/photo-1569529465841-dfecdab7503b?auto=format&fit=crop&w=700&q=70')"
+              ></div>
+              <span class="cat__index">02</span>
+              <h3>Spirits</h3>
+              <p>Single malts, bourbons, tequilas, and rare pours. If we don't stock it, our Item Request team will hunt it down.</p>
+              <a class="cat__link" href="#request">Browse spirits →</a>
+            </article>
+
+            <article class="cat glass-interactive" data-reveal style="--reveal-delay: 180ms">
+              <span class="sheen"></span>
+              <div
+                class="cat__img"
+                style="background-image: url('https://images.unsplash.com/photo-1535958636474-b021ee887b13?auto=format&fit=crop&w=700&q=70')"
+              ></div>
+              <span class="cat__index">03</span>
+              <h3>Craft Beer</h3>
+              <p>A rotating wall of local Maryland breweries and seasonal releases. We champion the Eastern Shore's best.</p>
+              <a class="cat__link" href="#request">See what's on →</a>
+            </article>
+
+            <article class="cat glass-interactive" data-reveal style="--reveal-delay: 270ms">
+              <span class="sheen"></span>
+              <div class="cat__img" style="background-image: url('assets/cigars.webp')"></div>
+              <span class="cat__index">04</span>
+              <h3>Cigars</h3>
+              <p>1,000+ selections from Quorum &amp; Acid to Cohiba &amp; Arturo Fuente, in our handmade cedar-lined humidor.</p>
+              <a class="cat__link" href="#humidor">Enter the humidor →</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== HUMIDOR SPLIT ===================== -->
+      <section class="section" id="humidor" aria-labelledby="humidorTitle">
+        <div class="container split">
+          <div class="split__media" data-reveal="left">
+            <div class="split__floating glass glass-strong">
+              <div>
+                <div class="num">1,000+</div>
+                <div class="lbl">Cigars in stock</div>
+              </div>
+              <div>
+                <div class="num">Cedar</div>
+                <div class="lbl">Spanish-lined humidor</div>
+              </div>
+            </div>
+          </div>
+
+          <div data-reveal="right">
+            <span class="eyebrow">The walk-in humidor</span>
+            <h2 class="section-head" style="margin-bottom: 1rem">Step inside a handmade cedar humidor</h2>
+            <p class="lead">
+              Our walk-in humidor is lined with genuine Spanish cedar and kept at perfect humidity,
+              so every cigar — from an everyday Quorum to a special-occasion Cohiba — is in
+              flawless condition the moment you choose it.
+            </p>
+
+            <ul class="feature-list">
+              <li>
+                <span class="tick" aria-hidden="true">✦</span>
+                <div>
+                  <strong>1,000+ selections</strong>
+                  <p>Budget-friendly to ultra-premium, with box and quantity discounts.</p>
+                </div>
+              </li>
+              <li>
+                <span class="tick" aria-hidden="true">✦</span>
+                <div>
+                  <strong>Guided recommendations</strong>
+                  <p>Tell us the occasion and palate — we'll match the wrapper, body, and price.</p>
+                </div>
+              </li>
+              <li>
+                <span class="tick" aria-hidden="true">✦</span>
+                <div>
+                  <strong>Accessories on hand</strong>
+                  <p>Cutters, lighters, humidifiers, and travel cases to round out the ritual.</p>
+                </div>
+              </li>
+            </ul>
+
+            <div style="margin-top: 2rem">
+              <a class="btn btn-glass" href="#visit">Visit the humidor <span class="btn-arrow" aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== STATS ===================== -->
+      <section class="section" aria-label="By the numbers" style="padding-block: clamp(2rem, 1rem + 3vw, 4rem)">
+        <div class="container">
+          <div class="stats">
+            <div class="stat glass" data-reveal style="--reveal-delay: 0ms">
+              <div class="stat__num"><span data-count="1000">0</span><span class="suffix">+</span></div>
+              <div class="stat__label">Wines on the shelf</div>
+            </div>
+            <div class="stat glass" data-reveal style="--reveal-delay: 90ms">
+              <div class="stat__num"><span data-count="1000">0</span><span class="suffix">+</span></div>
+              <div class="stat__label">Cigars in the humidor</div>
+            </div>
+            <div class="stat glass" data-reveal style="--reveal-delay: 180ms">
+              <div class="stat__num"><span data-count="30">0</span><span class="suffix">+</span></div>
+              <div class="stat__label">Years of expertise</div>
+            </div>
+            <div class="stat glass" data-reveal style="--reveal-delay: 270ms">
+              <div class="stat__num"><span data-count="1">0</span><span class="suffix">st</span></div>
+              <div class="stat__label">For selection in Dorchester</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== EVENTS ===================== -->
+      <section class="section" id="events" aria-labelledby="eventsTitle">
+        <div class="container">
+          <div class="events glass" data-reveal="scale">
+            <div class="events__bg" aria-hidden="true"></div>
+            <div>
+              <span class="eyebrow">Event planning</span>
+              <h2 id="eventsTitle" style="margin-top: 0.8rem">Weddings, parties &amp; brunches, handled</h2>
+              <p class="lead" style="margin-top: 1rem">
+                Planning something special? Sit down with the owner to build a custom package —
+                the right bottles, the right quantities, and the right price. We'll make sure
+                you never run dry and never over-buy.
+              </p>
+              <div style="margin-top: 1.8rem">
+                <a class="btn btn-primary" href="#request">Start planning <span class="btn-arrow" aria-hidden="true">→</span></a>
+              </div>
+            </div>
+
+            <div class="events__services">
+              <div class="events__service glass">
+                <span class="ico" aria-hidden="true">💍</span>
+                <div>
+                  <h4>Weddings</h4>
+                  <p>Curated wine, bubbles &amp; bar service sized to your guest count.</p>
+                </div>
+              </div>
+              <div class="events__service glass">
+                <span class="ico" aria-hidden="true">🥂</span>
+                <div>
+                  <h4>Parties &amp; brunches</h4>
+                  <p>Crowd-pleasing selections with quantity &amp; box discounts.</p>
+                </div>
+              </div>
+              <div class="events__service glass">
+                <span class="ico" aria-hidden="true">🎁</span>
+                <div>
+                  <h4>Gifting &amp; corporate</h4>
+                  <p>Bottle gifting, cigars, and accessories for any occasion.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== REQUEST ===================== -->
+      <section class="section" id="request" aria-labelledby="requestTitle">
+        <div class="container request">
+          <div class="request__aside" data-reveal="left">
+            <span class="eyebrow">Item request</span>
+            <h2 id="requestTitle">Can't find it? We'll track it down.</h2>
+            <p class="lead" style="margin-top: 1rem">
+              A bottle from a trip, a hard-to-find label, a specific cigar box — tell us what
+              you're after and our team will source it for you.
+            </p>
+            <ul class="request__points">
+              <li><span class="n">1</span> Tell us the wine, spirit, beer, or cigar you want.</li>
+              <li><span class="n">2</span> We check distributors and our network.</li>
+              <li><span class="n">3</span> We call or email you the moment it's in.</li>
+            </ul>
+          </div>
+
+          <form class="request__form glass glass-strong" id="requestForm" novalidate data-reveal="right">
+            <div class="field-row">
+              <div class="field">
+                <label for="rf-name">Your name</label>
+                <input id="rf-name" name="name" type="text" placeholder="Jane Doe" required autocomplete="name" />
+              </div>
+              <div class="field">
+                <label for="rf-phone">Phone</label>
+                <input id="rf-phone" name="phone" type="tel" placeholder="(410) 555-0123" autocomplete="tel" />
+              </div>
+            </div>
+            <div class="field">
+              <label for="rf-email">Email</label>
+              <input id="rf-email" name="email" type="email" placeholder="you@email.com" required autocomplete="email" />
+            </div>
+            <div class="field">
+              <label for="rf-item">What are you looking for?</label>
+              <input id="rf-item" name="item" type="text" placeholder="e.g. Caymus Cabernet 2021, Cohiba Robusto…" required />
+            </div>
+            <div class="field">
+              <label for="rf-notes">Notes (quantity, occasion, budget)</label>
+              <textarea id="rf-notes" name="notes" rows="3" placeholder="Need 12 bottles for a wedding on Aug 16…"></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit" style="width: 100%">
+              Send request <span class="btn-arrow" aria-hidden="true">→</span>
+            </button>
+            <p class="age-note" style="margin-top: 0.9rem; text-align: center">
+              Must be 21+. We'll only use your details to fulfill this request.
+            </p>
+          </form>
+        </div>
+      </section>
+
+      <!-- ===================== TESTIMONIALS ===================== -->
+      <section class="section" aria-labelledby="lovedTitle">
+        <div class="container">
+          <div class="section-head is-centered" data-reveal>
+            <span class="eyebrow is-centered">Loved locally</span>
+            <h2 id="lovedTitle">What the neighborhood says</h2>
+          </div>
+
+          <div class="quotes">
+            <figure class="quote glass glass-interactive" data-reveal style="--reveal-delay: 0ms">
+              <span class="sheen"></span>
+              <div class="quote__stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <blockquote>"Incredible selection and the staff actually know their wine. They paired three bottles for our dinner party — every one was a hit."</blockquote>
+              <figcaption class="quote__by">
+                <span class="quote__avatar" aria-hidden="true">M</span>
+                <span>
+                  <strong>Marcus T.</strong>
+                  <span>Cambridge, MD</span>
+                </span>
+              </figcaption>
+            </figure>
+
+            <figure class="quote glass glass-interactive" data-reveal style="--reveal-delay: 110ms">
+              <span class="sheen"></span>
+              <div class="quote__stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <blockquote>"The walk-in humidor is the best on the Shore. Huge range, fair prices, and they remember what I like. My go-to before every beach weekend."</blockquote>
+              <figcaption class="quote__by">
+                <span class="quote__avatar" aria-hidden="true">D</span>
+                <span>
+                  <strong>Denise R.</strong>
+                  <span>Easton, MD</span>
+                </span>
+              </figcaption>
+            </figure>
+
+            <figure class="quote glass glass-interactive" data-reveal style="--reveal-delay: 220ms">
+              <span class="sheen"></span>
+              <div class="quote__stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <blockquote>"They sourced a bottle I couldn't find anywhere for my anniversary. That kind of service keeps me coming back instead of the big-box stores."</blockquote>
+              <figcaption class="quote__by">
+                <span class="quote__avatar" aria-hidden="true">A</span>
+                <span>
+                  <strong>Anthony P.</strong>
+                  <span>Salisbury, MD</span>
+                </span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== VISIT ===================== -->
+      <section class="section" id="visit" aria-labelledby="visitTitle">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <span class="eyebrow">Visit us</span>
+            <h2 id="visitTitle">Find us on Ocean Gateway</h2>
+            <p>On your way to the beach or planning a night in — stop by, we're easy to find.</p>
+          </div>
+
+          <div class="visit">
+            <div class="visit__panel glass" data-reveal="left">
+              <div class="visit__rows">
+                <div class="visit__row">
+                  <span class="visit__ico" aria-hidden="true">📍</span>
+                  <div>
+                    <h4>Address</h4>
+                    <a
+                      href="https://maps.google.com/?q=2831+Ocean+Gateway,+Cambridge,+MD+21613"
+                      target="_blank"
+                      rel="noopener"
+                      >2831 Ocean Gateway, Cambridge, MD 21613</a
+                    >
+                  </div>
+                </div>
+                <div class="visit__row">
+                  <span class="visit__ico" aria-hidden="true">📞</span>
+                  <div>
+                    <h4>Phone</h4>
+                    <a href="tel:4102210116">410-221-0116</a>
+                  </div>
+                </div>
+                <div class="visit__row">
+                  <span class="visit__ico" aria-hidden="true">✉️</span>
+                  <div>
+                    <h4>Email</h4>
+                    <a href="mailto:BestWineMD@gmail.com">BestWineMD@gmail.com</a>
+                  </div>
+                </div>
+                <div class="visit__row">
+                  <span class="visit__ico" aria-hidden="true">🕑</span>
+                  <div style="width: 100%">
+                    <h4>Hours</h4>
+                    <div class="visit__hours">
+                      <div><span>Monday – Thursday</span><span>9:00 AM – 9:00 PM</span></div>
+                      <div class="today"><span>Friday – Saturday</span><span>9:00 AM – 10:00 PM</span></div>
+                      <div><span>Sunday</span><span>10:00 AM – 8:00 PM</span></div>
+                    </div>
+                    <p class="age-note" style="margin-top: 0.6rem">Hours are sample placeholders — update to your real schedule.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="visit__pay" aria-label="Accepted payments">
+                <span class="chip">Visa</span>
+                <span class="chip">Mastercard</span>
+                <span class="chip">Amex</span>
+                <span class="chip">Apple&nbsp;Pay</span>
+                <span class="chip">Google&nbsp;Pay</span>
+              </div>
+            </div>
+
+            <div class="visit__map" data-reveal="right">
+              <iframe
+                title="Map to Best Wine & Spirits, Cambridge MD"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=2831%20Ocean%20Gateway,%20Cambridge,%20MD%2021613&output=embed"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a class="brand" href="#top">
+              <span class="brand__mark" aria-hidden="true">B</span>
+              <span>Best Wine &amp; Spirits<small>Cambridge, MD</small></span>
+            </a>
+            <p>The Eastern Shore's destination for fine wine, spirits, craft beer, and premium cigars.</p>
+            <div class="socials">
+              <a href="#" aria-label="Facebook">f</a>
+              <a href="#" aria-label="Instagram">◎</a>
+              <a href="#" aria-label="Yelp">y</a>
+            </div>
+          </div>
+
+          <nav class="footer__col" aria-label="Shop">
+            <h5>Shop</h5>
+            <a href="#collection">Wine</a>
+            <a href="#collection">Spirits</a>
+            <a href="#collection">Craft Beer</a>
+            <a href="#humidor">Cigars</a>
+          </nav>
+
+          <nav class="footer__col" aria-label="Services">
+            <h5>Services</h5>
+            <a href="#events">Event Planning</a>
+            <a href="#request">Item Request</a>
+            <a href="#visit">Visit &amp; Hours</a>
+            <a href="tel:4102210116">Call the store</a>
+          </nav>
+
+          <div class="footer__news">
+            <h5>Stay in the know</h5>
+            <p>New arrivals, tastings, and member specials — straight to your inbox.</p>
+            <form id="newsletterForm">
+              <input type="email" name="email" placeholder="you@email.com" aria-label="Email address" required />
+              <button class="btn btn-primary" type="submit">Join</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <span>© <span id="year">2026</span> Best Wine &amp; Spirits. All rights reserved.</span>
+          <span>Please drink &amp; enjoy responsibly. Must be 21+. </span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===================== TOAST ===================== -->
+    <div class="toast" id="toast" role="status" aria-live="polite">
+      <span class="check" aria-hidden="true">✓</span>
+      <span id="toastMsg">Request sent — we'll be in touch soon.</span>
+    </div>
+
+    <!-- Scripts (plain, no modules — works over file://) -->
+    <script src="scripts/reveal.js" defer></script>
+    <script src="scripts/counters.js" defer></script>
+    <script src="scripts/parallax.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+  </body>
+</html>

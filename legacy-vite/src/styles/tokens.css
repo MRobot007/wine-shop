@@ -1,0 +1,87 @@
+/* =========================================================================
+   Design Tokens — Best Wine & Spirits
+   Royal: pure-black canvas, royal-purple as the interactive accent,
+   gold as precious trim. Georama Expanded display + Dancing Script accent.
+   ========================================================================= */
+
+:root {
+  /* ---- Black canvas + violet-tinted darks ---- */
+  --bg: #08060c;
+  --bg-2: #0d0a15;
+  --surface: #140f1f;
+  --surface-2: #1a1428;
+  --surface-3: #231b34;
+
+  /* ---- Text ---- */
+  --ink: #f4effb;
+  --ink-2: #d2c8e0;
+  --muted: #9b8fb0;
+  --faint: #6b6280;
+
+  /* ---- Lines ---- */
+  --line: rgba(184, 156, 255, 0.1);
+  --line-2: rgba(184, 156, 255, 0.2);
+
+  /* ---- Royal purple (the brand action color) ---- */
+  --royal: #7c40d6;
+  --royal-2: #9d6bec;
+  --royal-deep: #4d2392;
+  --royal-tint: rgba(124, 64, 214, 0.16);
+
+  /* ---- Gold (precious trim only) ---- */
+  --gold: #cda44e;
+  --gold-2: #e6c878;
+
+  /* ---- Aliases so existing class colors adopt the new palette ---- */
+  --brass: var(--gold);
+  --wine: var(--royal);
+  --wine-2: var(--royal-2);
+  --parchment: #ece3d4;
+
+  --accent: var(--royal);
+
+  /* ---- Shadows + royal glow ---- */
+  --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 16px 40px -16px rgba(0, 0, 0, 0.7);
+  --shadow-lg: 0 36px 80px -28px rgba(0, 0, 0, 0.85);
+  --glow-royal: 0 0 60px -8px rgba(124, 64, 214, 0.5);
+
+  /* ---- Typography ---- */
+  --font-display: "Georama", "Arial Narrow", system-ui, sans-serif;
+  --font-script: "Dancing Script", "Brush Script MT", cursive;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --text-hero: clamp(2.2rem, 1.4rem + 3.3vw, 4.5rem);
+  --text-h2: clamp(1.6rem, 1.2rem + 1.9vw, 2.8rem);
+  --text-h3: clamp(1.2rem, 1rem + 0.7vw, 1.5rem);
+  --text-lead: clamp(1rem, 0.96rem + 0.3vw, 1.16rem);
+  --text-body: 1rem;
+  --text-sm: 0.9rem;
+  --text-xs: 0.78rem;
+  --text-eyebrow: 0.72rem;
+
+  --tracking-eyebrow: 0.32em;
+
+  /* ---- Spacing ---- */
+  --space-section: clamp(4rem, 2.8rem + 5vw, 7.5rem);
+  --space-gutter: clamp(1.1rem, 0.5rem + 3vw, 2.75rem);
+  --maxw: 1240px;
+  --maxw-narrow: 740px;
+
+  /* ---- Radii ---- */
+  --radius-sm: 8px;
+  --radius: 14px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  /* ---- Motion ---- */
+  --dur-fast: 150ms;
+  --dur: 280ms;
+  --dur-slow: 520ms;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --nav-h: 70px;
+
+  color-scheme: dark;
+}

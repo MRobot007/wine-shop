@@ -1,0 +1,22 @@
+node_modules
+.next
+out
+dist
+*.local
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+
+# env
+.env
+.env*.local
+
+# vercel
+.vercel
+
+# logs
+*.log
+npm-debug.log*
+
+# local dev helpers (puppeteer screenshot scripts)
+_*.mjs

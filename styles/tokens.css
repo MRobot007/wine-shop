@@ -1,0 +1,91 @@
+/* =========================================================================
+   Design Tokens — Best Wine & Spirits
+   Neumorphic (Soft UI) applied over the existing warm palette.
+   Colours are unchanged; depth now comes from dual soft shadows.
+   ========================================================================= */
+
+:root {
+  /* Surfaces — molded from one material (cards match the page) */
+  --bg: #f1ece3;
+  --surface: #f1ece3;
+  --surface-2: #ece6db;
+  --surface-3: #e6dfd2;
+
+  /* Ink / text */
+  --ink: #211a1c;
+  --ink-2: #574b4d;
+  --muted: #897c7d;
+  --faint: #b0a49f;
+
+  /* Hairlines (kept very faint — neumorphism leans on shadow, not borders) */
+  --line: rgba(150, 128, 100, 0.16);
+  --line-2: rgba(150, 128, 100, 0.26);
+
+  /* Brand wine */
+  --wine: #7d1f2e;
+  --wine-deep: #611521;
+  --wine-tint: #f0e3df;
+
+  /* Accents / semantic colour */
+  --gold: #a9812f;
+  --gold-tint: #efe6d2;
+  --green: #2f7d52;
+  --green-tint: #e2ede2;
+  --amber: #95650f;
+  --amber-tint: #f0e7d0;
+  --red: #b3402f;
+  --red-tint: #f1e2dc;
+  --blue: #2f5d8c;
+  --blue-tint: #e2ebf2;
+
+  --accent: var(--wine);
+
+  /* ---- Neumorphic shadow system (warm-grey dark + white light) ---- */
+  --nm-d: 188, 170, 146; /* warm taupe derived from the ivory surface */
+  --shadow-xs: 4px 4px 8px rgba(var(--nm-d), 0.5), -4px -4px 8px rgba(255, 255, 255, 0.8);
+  --shadow-sm: 5px 5px 11px rgba(var(--nm-d), 0.5), -5px -5px 11px rgba(255, 255, 255, 0.82);
+  --shadow-md: 8px 8px 17px rgba(var(--nm-d), 0.55), -8px -8px 17px rgba(255, 255, 255, 0.85);
+  --shadow-lg: 12px 12px 26px rgba(var(--nm-d), 0.6), -12px -12px 26px rgba(255, 255, 255, 0.9);
+  --nm-inset: inset 5px 5px 10px rgba(var(--nm-d), 0.55), inset -5px -5px 10px rgba(255, 255, 255, 0.8);
+  --nm-inset-deep: inset 8px 8px 16px rgba(var(--nm-d), 0.6), inset -8px -8px 16px rgba(255, 255, 255, 0.85);
+  --nm-pressed: inset 3px 3px 6px rgba(var(--nm-d), 0.55), inset -3px -3px 6px rgba(255, 255, 255, 0.7);
+
+  /* Typography */
+  --font-display: "Georama", "Arial Narrow", system-ui, sans-serif;
+  --font-script: "Dancing Script", "Brush Script MT", cursive;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --text-hero: clamp(2.2rem, 1.4rem + 3.2vw, 4.2rem);
+  --text-h2: clamp(1.7rem, 1.25rem + 1.7vw, 2.6rem);
+  --text-h3: clamp(1.2rem, 1rem + 0.7vw, 1.5rem);
+  --text-lead: clamp(1.02rem, 0.98rem + 0.3vw, 1.18rem);
+  --text-body: 1rem;
+  --text-sm: 0.9rem;
+  --text-xs: 0.78rem;
+  --text-eyebrow: 0.74rem;
+
+  --tracking-eyebrow: 0.2em;
+
+  /* Spacing */
+  --space-section: clamp(3.5rem, 2.6rem + 4.5vw, 6.5rem);
+  --space-gutter: clamp(1.1rem, 0.5rem + 3vw, 2.5rem);
+  --maxw: 1240px;
+  --maxw-narrow: 720px;
+
+  /* Radii — hyper-rounded, pillowed */
+  --radius-sm: 14px;
+  --radius: 18px;
+  --radius-lg: 30px;
+  --radius-pill: 999px;
+
+  /* Motion */
+  --dur-fast: 140ms;
+  --dur: 300ms;
+  --dur-slow: 460ms;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --topbar-h: 38px;
+  --nav-h: 72px;
+
+  color-scheme: light;
+}
