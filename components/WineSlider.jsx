@@ -3,18 +3,10 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
 
 // Showcase carousel — minimal, image-forward. Local imagery for reliability.
-// To swap in different photos, just replace /public/assets/slide-1..4.jpg.
+// To swap in different photos, just replace /public/assets/slide-1..3.jpg.
 const SLIDES = [
   {
     img: "/assets/slide-1.jpg",
-    type: "Estate Grown",
-    name: "A wine with its own style",
-    cta: "Shop reds",
-    href: "/shop/?cat=Wine",
-    pos: "50% 50%",
-  },
-  {
-    img: "/assets/slide-2.jpg",
     type: "Harvest",
     name: "From hill to glass",
     cta: "Explore wines",
@@ -22,7 +14,7 @@ const SLIDES = [
     pos: "50% 42%",
   },
   {
-    img: "/assets/slide-3.jpg",
+    img: "/assets/slide-2.jpg",
     type: "After Hours",
     name: "The evening pour",
     cta: "Shop reds",
@@ -30,7 +22,7 @@ const SLIDES = [
     pos: "34% 50%",
   },
   {
-    img: "/assets/slide-4.jpg",
+    img: "/assets/slide-3.jpg",
     type: "Uncorked",
     name: "Made for sharing",
     cta: "Shop wine",
