@@ -5,11 +5,11 @@
    ========================================================================= */
 
 :root {
-  /* Surfaces — molded from one material (cards match the page) */
-  --bg: #f1ece3;
-  --surface: #f1ece3;
-  --surface-2: #ece6db;
-  --surface-3: #e6dfd2;
+  /* Surfaces — clean white material */
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #f5f4f1;
+  --surface-3: #eceae6;
 
   /* Ink / text */
   --ink: #211a1c;
@@ -17,9 +17,9 @@
   --muted: #897c7d;
   --faint: #b0a49f;
 
-  /* Hairlines (kept very faint — neumorphism leans on shadow, not borders) */
-  --line: rgba(150, 128, 100, 0.16);
-  --line-2: rgba(150, 128, 100, 0.26);
+  /* Hairlines (neutral, faint — for definition on white) */
+  --line: rgba(28, 22, 24, 0.09);
+  --line-2: rgba(28, 22, 24, 0.15);
 
   /* Brand wine */
   --wine: #7d1f2e;
@@ -41,7 +41,7 @@
   --accent: var(--wine);
 
   /* ---- Neumorphic shadow system (warm-grey dark + white light) ---- */
-  --nm-d: 188, 170, 146; /* warm taupe derived from the ivory surface */
+  --nm-d: 196, 198, 205; /* soft neutral grey for shadows on white */
   --shadow-xs: 4px 4px 8px rgba(var(--nm-d), 0.5), -4px -4px 8px rgba(255, 255, 255, 0.8);
   --shadow-sm: 5px 5px 11px rgba(var(--nm-d), 0.5), -5px -5px 11px rgba(255, 255, 255, 0.82);
   --shadow-md: 8px 8px 17px rgba(var(--nm-d), 0.55), -8px -8px 17px rgba(255, 255, 255, 0.85);
