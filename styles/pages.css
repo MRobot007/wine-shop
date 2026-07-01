@@ -1246,7 +1246,7 @@
 .pdp__buybar,
 .filters,
 .map {
-  border: none;
+  border: 1px solid var(--line);
   box-shadow: var(--shadow-sm);
 }
 .pdp__media,

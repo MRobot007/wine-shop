@@ -40,15 +40,15 @@
 
   --accent: var(--wine);
 
-  /* ---- Neumorphic shadow system (warm-grey dark + white light) ---- */
-  --nm-d: 196, 198, 205; /* soft neutral grey for shadows on white */
-  --shadow-xs: 4px 4px 8px rgba(var(--nm-d), 0.5), -4px -4px 8px rgba(255, 255, 255, 0.8);
-  --shadow-sm: 5px 5px 11px rgba(var(--nm-d), 0.5), -5px -5px 11px rgba(255, 255, 255, 0.82);
-  --shadow-md: 8px 8px 17px rgba(var(--nm-d), 0.55), -8px -8px 17px rgba(255, 255, 255, 0.85);
-  --shadow-lg: 12px 12px 26px rgba(var(--nm-d), 0.6), -12px -12px 26px rgba(255, 255, 255, 0.9);
-  --nm-inset: inset 5px 5px 10px rgba(var(--nm-d), 0.55), inset -5px -5px 10px rgba(255, 255, 255, 0.8);
-  --nm-inset-deep: inset 8px 8px 16px rgba(var(--nm-d), 0.6), inset -8px -8px 16px rgba(255, 255, 255, 0.85);
-  --nm-pressed: inset 3px 3px 6px rgba(var(--nm-d), 0.55), inset -3px -3px 6px rgba(255, 255, 255, 0.7);
+  /* ---- Clean soft shadow system (minimal e-commerce) ---- */
+  --shadow-color: 22, 20, 28;
+  --shadow-xs: 0 1px 2px rgba(var(--shadow-color), 0.05), 0 1px 3px rgba(var(--shadow-color), 0.05);
+  --shadow-sm: 0 1px 3px rgba(var(--shadow-color), 0.05), 0 5px 12px -4px rgba(var(--shadow-color), 0.07);
+  --shadow-md: 0 2px 6px rgba(var(--shadow-color), 0.05), 0 12px 28px -8px rgba(var(--shadow-color), 0.12);
+  --shadow-lg: 0 4px 12px rgba(var(--shadow-color), 0.06), 0 24px 52px -14px rgba(var(--shadow-color), 0.18);
+  --nm-inset: inset 0 0 0 1px var(--line-2);
+  --nm-inset-deep: inset 0 0 0 1px var(--line-2);
+  --nm-pressed: inset 0 2px 6px rgba(var(--shadow-color), 0.1);
 
   /* Typography */
   --font-display: "Georama", "Arial Narrow", system-ui, sans-serif;
@@ -72,10 +72,10 @@
   --maxw: 1240px;
   --maxw-narrow: 720px;
 
-  /* Radii — hyper-rounded, pillowed */
-  --radius-sm: 14px;
-  --radius: 18px;
-  --radius-lg: 30px;
+  /* Radii — moderate & crisp (minimal e-commerce) */
+  --radius-sm: 10px;
+  --radius: 14px;
+  --radius-lg: 20px;
   --radius-pill: 999px;
 
   /* Motion */
