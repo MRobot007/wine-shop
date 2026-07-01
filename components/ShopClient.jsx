@@ -57,7 +57,7 @@ export default function ShopClient() {
   return (
     <div className="shop-layout">
       <aside className={`filters${open ? " is-open" : ""}`}>
-        <div className="filters__group">
+        <div className="filters__group filters__group--chips">
           <h4>Category</h4>
           <button className={`filters__opt${cat === "All" ? " is-active" : ""}`} onClick={() => setCat("All")}>
             <span className="dot" /> All <span className="n">{PRODUCTS.length}</span>
@@ -68,7 +68,7 @@ export default function ShopClient() {
             </button>
           ))}
         </div>
-        <div className="filters__group">
+        <div className="filters__group filters__group--chips">
           <h4>Price</h4>
           {PRICE_BANDS.map((b) => (
             <button key={b.id} className={`filters__opt${band === b.id ? " is-active" : ""}`} onClick={() => setBand(b.id)}>

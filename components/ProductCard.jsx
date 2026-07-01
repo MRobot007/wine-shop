@@ -1,18 +1,30 @@
 "use client";
+import { useState } from "react";
 import Link from "next/link";
 import Stars from "./Stars";
+import Icon from "./Icon";
 import { useCart } from "@/context/Cart";
 import { money } from "@/lib/format";
 import { STOCK_LABEL } from "@/lib/content";
 
 export default function ProductCard({ product: p }) {
   const { add } = useCart();
+  const [fav, setFav] = useState(false);
   const sl = STOCK_LABEL[p.stock];
   const out = p.stock === "out";
   const href = `/product/${p.slug}/`;
 
   return (
     <article className="product">
+      <button
+        type="button"
+        className={`product__fav${fav ? " is-on" : ""}`}
+        aria-label={fav ? "Remove from wishlist" : "Add to wishlist"}
+        aria-pressed={fav}
+        onClick={() => setFav((v) => !v)}
+      >
+        <Icon name="heart" size={16} strokeWidth={2} />
+      </button>
       <Link
         className="product__media"
         href={href}

@@ -403,6 +403,7 @@
 
 /* ---- Product card ---- */
 .product {
+  position: relative;
   display: flex;
   flex-direction: column;
   background: var(--surface);
@@ -436,6 +437,7 @@
   position: absolute;
   top: 0.6rem;
   right: 0.6rem;
+  z-index: 2;
   width: 34px;
   height: 34px;
   display: grid;

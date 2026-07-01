@@ -490,6 +490,42 @@
   font-size: var(--text-xs);
   color: var(--faint);
 }
+/* Category / price rendered as pill chips */
+.filters__group--chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.filters__group--chips h4 {
+  flex: 0 0 100%;
+  margin-bottom: 0.2rem;
+}
+.filters__group--chips .filters__opt {
+  width: auto;
+  padding: 0.42rem 0.85rem;
+  border: 1px solid var(--line-2);
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  gap: 0.4rem;
+  transition: border-color var(--dur) var(--ease), background var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+.filters__group--chips .filters__opt:hover {
+  border-color: var(--ink);
+}
+.filters__group--chips .filters__opt .dot {
+  display: none;
+}
+.filters__group--chips .filters__opt.is-active {
+  background: var(--wine);
+  color: #fff;
+  border-color: var(--wine);
+  font-weight: 500;
+}
+.filters__group--chips .filters__opt .n {
+  margin-left: 0;
+  color: inherit;
+  opacity: 0.75;
+}
 .shop-search {
   position: relative;
   margin-bottom: 1.2rem;
@@ -567,7 +603,7 @@
   aspect-ratio: 4 / 5;
   border-radius: var(--radius-lg);
   border: 1px solid var(--line);
-  background: linear-gradient(155deg, var(--wine-tint), var(--surface-2));
+  background: var(--surface-2);
   padding: clamp(1rem, 2vw, 1.6rem);
   overflow: hidden;
 }
@@ -742,7 +778,8 @@
 .pairing {
   margin-top: 1.4rem;
   padding: 1.1rem 1.2rem;
-  background: var(--wine-tint);
+  background: var(--surface-2);
+  border-left: 3px solid var(--wine);
   border-radius: var(--radius);
 }
 .pairing h4 {
