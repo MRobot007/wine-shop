@@ -8,6 +8,7 @@ import { CartProvider } from "@/context/Cart";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AgeGate from "@/components/AgeGate";
+import ScrollReveal from "@/components/ScrollReveal";
 import { STORE } from "@/lib/content";
 
 export const metadata = {
@@ -53,6 +54,7 @@ export default function RootLayout({ children }) {
             <Navbar />
             <main id="main">{children}</main>
             <Footer />
+            <ScrollReveal />
           </CartProvider>
         </ToastProvider>
       </body>

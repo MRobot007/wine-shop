@@ -1614,11 +1614,11 @@
     font-size: 0.76rem;
     line-height: 1.3;
   }
-  /* Keep a real 2-up shop grid on phones */
+  /* Keep a real 2-up shop grid on phones — with vertical breathing room */
   .products,
   .products--shop {
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.7rem;
+    gap: 1.15rem 0.8rem;
   }
   .field-row,
   .fulfillment {
