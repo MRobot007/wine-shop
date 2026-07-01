@@ -18,6 +18,7 @@ const SORTS = [
   { v: "rating", l: "Top rated" },
   { v: "name", l: "Name A–Z" },
 ];
+const CAT_ICON = { All: "grid", Wine: "glass", Spirits: "bottle", Beer: "beer", Cigars: "cigar" };
 
 export default function ShopClient() {
   const params = useSearchParams();
@@ -60,11 +61,11 @@ export default function ShopClient() {
         <div className="filters__group filters__group--chips">
           <h4>Category</h4>
           <button className={`filters__opt${cat === "All" ? " is-active" : ""}`} onClick={() => setCat("All")}>
-            <span className="dot" /> All <span className="n">{PRODUCTS.length}</span>
+            <Icon name="grid" size={15} strokeWidth={1.7} /> All <span className="n">{PRODUCTS.length}</span>
           </button>
           {CATEGORIES.map((c) => (
             <button key={c} className={`filters__opt${cat === c ? " is-active" : ""}`} onClick={() => setCat(c)}>
-              <span className="dot" /> {c} <span className="n">{categoryCount(c)}</span>
+              <Icon name={CAT_ICON[c] || "grid"} size={15} strokeWidth={1.7} /> {c} <span className="n">{categoryCount(c)}</span>
             </button>
           ))}
         </div>
